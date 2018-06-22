@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="FormController">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Indie Philly | Contact</title>
+    <link rel="stylesheet" href="../stylesheets/reset.css">
+    <link rel="stylesheet" href="../stylesheets/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+
+
+</head>
+<body style="font-family: 'Orbitron', sans-serif;" ng-controller="myCtrl">
+    <header>
+        <nav class="navbar navbar-expand-lg" style="background-color: black; display:inline;">
+            <div id="changeLogo">
+                <img src="../images/logo-1.jpg" alt="logo1" id="logo1" class="logoSwitch navbar-brand" />
+                <img src="../images/logo-2.jpg" alt="logo2" id="logo2" class="logoSwitch navbar-brand" />
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../home/index.html">HOME <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../table-reserve/index.html">TABLE RESERVATIONS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../events/index.html">EVENTS</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="container">
+        <form name="contactForm" method="post" novalidate>
+            <h1>Contact</h1>
+            <p>{{contact}}</p>
+            <div class="form-group">
+                <br />First Name <span class="text-danger">*</span>
+                <br /><input type="text" size="45" name="fName" id="firstName" ng-model="contact.fname" ng-required="true" />             
+            </div>
+            <div class="form-group">
+                <br />Last Name <span class="text-danger">*</span>
+                <br /><input type="text" size="45" name="lname" id="lastName" ng-model="contact.lname" ng-required="true" />
+            </div>
+            <div class="form-group">
+                <br />Email Address <span class="text-danger">*</span>
+                <br /><input type="text" size="45" name="email" id="email" ng-model="contact.email" placeholder="name@example.com" ng-required="true" />
+            </div>
+            <div class="form-group">
+                <br />Message <span class="text-danger"></span>
+                <br /><textarea name="message" cols="70" rows="10" id="message" ng-model="contact.message" placeholder="Enter Message Here..." ng-required="true"></textarea>
+            </div>
+            
+            <input type="submit" value="submit" ng-disabled="myForm.$invalid">
+        </form>
+
+        <div class="location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12232.69730355874!2d-75.137913!3d39.959855!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb80e2bcbe0f9667d!2sSoundGarden+Hall!5e0!3m2!1sen!2sus!4v1527465989028" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <p>520 N. Christopher Columbus Blvd</p>
+            <p>Philadelphia, PA 19123</p>
+        </div>
+    </div>
+
+
+
+
+    <footer class="page-footer font-small cyan darken-3 mt-4">
+
+        <!-- Footer Links -->
+        <div class="container">
+
+            <!-- Grid row-->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-12 py-5">
+                    <div class="mb-5 flex-center">
+                        <div class="social-icons">
+                            <!-- Facebook -->
+                            <a class="fb-ic">
+                                <img src="../images/icon-1.jpg" style="width:100px; height:100px;">
+                            </a>
+
+                            <!--Instagram-->
+                            <a class="ins-ic">
+                                <img src="../images/icon-2.jpg" style="width:100px; height:100px;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row-->
+
+        </div>
+        <!-- Footer Links -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+            © All Rights Reserved
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/contact.js"></script>
+<script src="../js/main.js"></script>
+</html>

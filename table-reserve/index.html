@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Indie Philly | Table Reservations</title>
+    <link rel="stylesheet" href="../stylesheets/reset.css">
+    <link rel="stylesheet" href="../stylesheets/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+
+
+</head>
+<body style="font-family: 'Orbitron', sans-serif;">
+    <header>
+        <nav class="navbar navbar-expand-lg" style="background-color: black; display:inline;">
+            <div id="changeLogo">
+                <img src="../images/logo-1.jpg" alt="logo1" id="logo1" class="logoSwitch navbar-brand" />
+                <img src="../images/logo-2.jpg" alt="logo2" id="logo2" class="logoSwitch navbar-brand" />
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../home/index.html">HOME <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">TABLE RESERVATIONS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../events/index.html">EVENTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact/index.html">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    
+        <div id="table-form">
+            <form ng-app="tableApp" ng-controller="myController" name="myForm" method="post"  ng-submit="form()" novalidate>
+                <h1 style="text-align:center">Table Reservations</h1>
+              
+                <div class="form-group">
+                    <br />First Name <span class="text-danger">*</span>
+                    <br /><input type="text" size="45" name="fname" id="firstName" ng-model="fname" required />
+                    <span style="color:red;" ng-show="myForm.fname.$dirty && myForm.fname.$invalid"></span>
+                    <span ng-show="myForm.fname.$error.required">First name is required!</span>
+
+                </div>
+                <div class="form-group">
+                    <br />Last Name <span class="text-danger">*</span>
+                    <br /><input type="text" size="45" name="lname" id="lastName" ng-model="lname" required />
+                    <span style="color:red;" ng-show="myForm.lname.$dirty && myForm.lname.$invalid"></span>
+                    <span ng-show="myForm.lname.$error.required">Last name is required!</span>
+                </div>
+                <div class="form-group">
+                    <br />Email Address <span class="text-danger">*</span>
+                    <br /><input type="email" size="45" name="email" id="email" ng-model="email" placeholder="name@example.com" required />
+                    <span style="color:red;" ng-show="myForm.email.$dirty && myForm.email.$invalid"></span">
+                    <span ng-show="myForm.email.$error.required">Email is required!</span>
+                </div>
+                <div class="form-group">
+                    <br />Phone <span class="text-danger">*</span>
+                    <br /><input type="text" size="20" name="phone" id="phone" ng-model="phone" placeholder="XXX-XXX-XXXX" maxlength="10" required />
+                    <span style="color:red;" ng-show="myForm.phone.$dirty && myForm.phone.$invalid"></span">
+                    <span ng-show="myForm.phone.$error.required">Phone number is required!</span>
+                </div>
+                <div class="form-group">
+                    <br />Number of Guests <span class="text-danger">*</span>
+                    <br /><input type="text" size="5" name="guests" id="guests" ng-model="guests" required />
+                    <span style="color:red;" ng-show="myForm.guests.$dirty && myForm.guests.$invalid"></span>
+                    <span ng-show="myForm.guests.$error.required">Number of guests is required!</span>
+                </div>
+
+                <div class="form-group">
+                    <br />Reason for Reservation?<span class="text-danger">*</span>
+                    <br /><select class="selection" id="inlineFormCustomSelect" name="reserve" required>
+                        <option value="0"></option>
+                        <option value="1">VIP Service</option>
+                        <option value="2">Birthdays</option>
+                        <option value="3">Bachlorette</option>
+                        <option value="4">Private Parties</option>
+                    </select>
+                    <span ng-show="myForm.lname.$invalid && myForm.lname.$touched">Selection is required</span>
+                </div>
+
+                <div class="form-group">
+                    <br />Additional Requests <span class="text-danger"></span>
+                    <br /><textarea name="message" cols="60" rows="10" id="message" placeholder="Enter Message Here..."></textarea>
+                </div>
+
+                <input type="submit" value="submit" ng-disabled="myForm.$invalid">
+            </form>
+
+        </div>
+    </div>
+
+    <footer class="page-footer font-small cyan darken-3 mt-4">
+
+        <!-- Footer Links -->
+        <div class="container">
+
+            <!-- Grid row-->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-12 py-5">
+                    <div class="mb-5 flex-center">
+                        <div class="social-icons">
+                            <!-- Facebook -->
+                            <a class="fb-ic" href="https://www.facebook.com/indiephila/?ref=br_rs">
+                                <img src="../images/icon-1.jpg" style="width:100px; height:100px;">
+                            </a>
+
+                            <!--Instagram-->
+                            <a class="ins-ic" href="https://www.instagram.com/indiephila/?hl=en">
+                                <img src="../images/icon-2.jpg" style="width:100px; height:100px;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row-->
+
+        </div>
+        <!-- Footer Links -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+            © All Rights Reserved.
+            520 N. Columbus Blvd
+            Philadelphia, PA 19123
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="../js/main.js"></script>
+</html>

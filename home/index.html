@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Indie Philly | Home</title>
+    <link rel="stylesheet" href="../stylesheets/reset.css">
+    <link rel="stylesheet" href="../stylesheets/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+
+
+</head>
+<body style="font-family: 'Orbitron', sans-serif;">
+    <header>
+        <nav class="navbar navbar-expand-lg" style="background-color: black; display:inline;" >
+            <div id="changeLogo">
+                <img src="../images/logo-1.jpg" alt="logo1" id="logo1" class="logoSwitch navbar-brand" />
+                <img src="../images/logo-2.jpg" alt="logo2" id="logo2" class="logoSwitch navbar-brand" />
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../table-reserve/index.html">TABLE RESERVATIONS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../events/index.html">EVENTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact/index.html">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    
+        <!--Carousel-->
+        <div id="eventCarousel" class="carousel slide" data-ride="carousel">
+            <!--Carousel Indicators-->
+            <ol class="carousel-indicators">
+                <li data-target="#eventCarousel" data-slide-to="0"></li>
+                <li data-target="#eventCarousel" data-slide-to="1"></li>
+                <li data-target="#eventCarousel" data-slide-to="2"></li>
+                <li data-target="#eventCarousel" data-slide-to="3"></li>
+                <li data-target="#eventCarousel" data-slide-to="4"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="../images/image-1.jpg" alt="First Slide" id="image1" />
+                    <div class="carousel-caption">
+                        <h1>The Roots Afterparty Featuring 2 Chainz & Rich The Kid</h1>
+                        <h2>Saturday, June 2nd</h2>
+                        <h3>Tickets on sale NOW: <a href="https://www.eventbrite.com/e/official-roots-picnic-afterparty-2chainz-rich-da-kid-tickets-46477569662"><button class="btn btn-primary">Tickets</button></a></h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../images/image-3.jpg" alt="Third Slide" id="image3" />
+                    <div class="carousel-caption">
+                        <h1>Love & Hip Hop: Miami vs. Atlanta </h1>
+                        <h2>Sunday, June 3rd</h2>
+                        <h3>Tickets on sale NOW: <button class="btn btn-primary">Tickets</button></h3>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../images/image-2.jpg" alt="Second Slide" id="image2" />
+                    <div class="carousel-caption">
+                        <h1>Vicious Featuring Crizzly, Yakz, & Somnium Sound</h1>
+                        <h2>Friday, June 15th</h2>
+                        <h3>Tickets on sale NOW: <a href="https://unlockedpresents.com/event/crizzly-free-rsvp"><button class="btn btn-primary">Tickets</button></a></h3>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../images/image-4.jpg" alt="Second Slide" id="image4" />
+                    <div class="carousel-caption">
+                        <h1>Dave East</h1>
+                        <h2>Friday, June 9th</h2>
+                        <h3>Tickets on sale NOW: <button class="btn btn-primary">Tickets</button></h3>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../images/image-5.jpg" alt="Second Slide" id="image5" />
+                    <div class="carousel-caption">
+                        <h1>Triple Threat Tour Featuring Infext, Oolacile, and MurDa</h1>
+                        <h2>Friday, June 29th</h2>
+                        <h3>Tickets on sale NOW: <a href="https://www.eventbrite.com/e/triple-threat-tour-ft-infekt-oolacile-murda-free-rsvp-tickets-46543267165"> <button class="btn btn-primary">Tickets</button></a></h3>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--Carousel Controls-->
+            <a class="carousel-control-prev" href="#eventCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#eventCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small cyan darken-3 mt-4">
+
+        <!-- Footer Links -->
+        <div class="container">
+
+            <!-- Grid row-->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-12 py-5">
+                    <div class="mb-5 flex-center">
+                        <div class="social-icons">
+                            <!-- Facebook -->
+                            <a class="fb-ic" href="https://www.facebook.com/indiephila/?ref=br_rs">
+                                <img src="../images/icon-1.jpg" style="width:100px; height:100px;">
+                            </a>
+
+                            <!--Instagram-->
+                            <a class="ins-ic" href="https://www.instagram.com/indiephila/?hl=en">
+                                <img src="../images/icon-2.jpg" style="width:100px; height:100px;">
+                            </a>
+                        </div>   
+                    </div>
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row-->
+
+        </div>
+        <!-- Footer Links -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+            © All Rights Reserved.
+            520 N. Columbus Blvd
+            Philadelphia, PA 19123
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+
+</body>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="../js/home.js"></script>
+<script src="../js/main.js"></script>
+</html>
